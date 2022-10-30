@@ -1,14 +1,17 @@
 package com.miu.walmartlogin
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var userArr = arrayOf(
+    var userArr = arrayListOf(
         User("Su Lai","Zin","sulai@gmail.com","123")
         ,User("William","Smith","will@gmail.com","123")
         ,User("Rahul","Chaturvedi","rahul@gmail.com","123")
@@ -34,6 +37,25 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+        }
+        //Task5
+        var resultContracts = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            //callback to retrieve the result
+            //result object contains the intent and RESULT_OK or RESULT_CANCEL
+                result -> //what will do after getting result back
+            if(result.resultCode == Activity.RESULT_OK)
+                //userArr.add(result.data?.data as User)
+                //tv.text = result.data?.data.toString()//data means getting the intent
+                //val hi = result.data?.data.toString()
+                //println("========= Reg Act ==========: $result.data?.data.toString()")
+                Log.i("Reg Act:",result.data?.data.toString())
+            else
+                Log.i("Reg Act:","Failed to get Result")
+        }
+
+        btnCreate.setOnClickListener{
+            val intent = Intent(this,CreateAccount::class.java)
+            resultContracts.launch(intent)
         }
     }
 
