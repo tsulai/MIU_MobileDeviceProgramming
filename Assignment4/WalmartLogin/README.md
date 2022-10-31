@@ -3,4 +3,5 @@
 ![alt text](https://github.com/tsulai/MIU_MobileDeviceProgramming/blob/master/Assignment4/3_ShoppingCategory.JPG)
 ![alt text](https://github.com/tsulai/MIU_MobileDeviceProgramming/blob/master/Assignment4/4_ShoppingCategory_Clicked.JPG)
 ![alt text](https://github.com/tsulai/MIU_MobileDeviceProgramming/blob/master/Assignment4/5_CreateAccount.JPG)
+![alt text](https://github.com/tsulai/MIU_MobileDeviceProgramming/blob/master/Assignment4/6_CreateAccount_Success1.JPG)
 ![alt text](https://github.com/tsulai/MIU_MobileDeviceProgramming/blob/master/Assignment4/7_CreateAccount_Success2.JPG)
