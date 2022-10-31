@@ -12,13 +12,12 @@ class CreateAccount : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
         btnCreateAccount.setOnClickListener{
-            val result = User(etFirstName.toString(),etLastName.toString(),etEmail.toString(),etPassword.toString())
+            val result = User(etFirstName.text.toString(),etLastName.text.toString(),etEmail.text.toString(),etPassword.text.toString())
             val rintent = intent
             rintent.putExtra("user", result)
-            //rintent.data = result
             setResult(Activity.RESULT_OK, rintent)
             Toast.makeText(this, "Account created successfully.", Toast.LENGTH_LONG).show()
-
+            finish()
 
         }
     }

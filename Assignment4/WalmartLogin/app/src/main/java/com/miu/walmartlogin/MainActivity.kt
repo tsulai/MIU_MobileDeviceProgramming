@@ -43,14 +43,15 @@ class MainActivity : AppCompatActivity() {
             //callback to retrieve the result
             //result object contains the intent and RESULT_OK or RESULT_CANCEL
                 result -> //what will do after getting result back
-            if(result.resultCode == Activity.RESULT_OK)
-                //userArr.add(result.data?.data as User)
-                //tv.text = result.data?.data.toString()//data means getting the intent
-                //val hi = result.data?.data.toString()
-                //println("========= Reg Act ==========: $result.data?.data.toString()")
-                Log.i("Reg Act:",result.data?.data.toString())
-            else
-                Log.i("Reg Act:","Failed to get Result")
+            if(result.resultCode == Activity.RESULT_OK) {
+                val temp = result.data?.getSerializableExtra("user")
+                val newUser = temp as User
+                userArr.add(newUser)
+               //println("========User Array: ${userArr.toString()}")
+            }
+            else{
+                Toast.makeText(this,"Fail to get Result!",Toast.LENGTH_LONG).show()
+            }
         }
 
         btnCreate.setOnClickListener{
