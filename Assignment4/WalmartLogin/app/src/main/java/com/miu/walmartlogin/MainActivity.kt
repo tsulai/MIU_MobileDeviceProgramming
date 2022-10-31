@@ -2,11 +2,11 @@ package com.miu.walmartlogin
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -57,6 +57,31 @@ class MainActivity : AppCompatActivity() {
         btnCreate.setOnClickListener{
             val intent = Intent(this,CreateAccount::class.java)
             resultContracts.launch(intent)
+        }
+        //task 6
+        tvForgetPassword.setOnClickListener{
+            var email = etEmail.text.toString()
+            var pw : String? = ""
+            for(u in userArr){
+                if(u.username == email){
+                    pw = u.password
+                    break
+                }
+            }
+            if(pw != ""){
+                //send email implicit intent
+                val emailIntent = Intent(
+                    Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto", email, null
+                    )
+                )
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Walmart Forgot Password")
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Your password is: $pw")
+                startActivity(Intent.createChooser(emailIntent, "Send email..."))
+
+            }else{
+                Toast.makeText(this,"User Not Found!",Toast.LENGTH_LONG).show()
+            }
         }
     }
 

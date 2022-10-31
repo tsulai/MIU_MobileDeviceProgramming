@@ -21,4 +21,12 @@ class CreateAccount : AppCompatActivity() {
 
         }
     }
+    //back button click in second activity lead to main activity page, then main activity try getting
+    //result , but it shown "Failed to get Result"
+    //to prevent this
+    override fun onBackPressed() {
+        setResult(Activity.RESULT_CANCELED)
+        finish()
+    }
+
 }
