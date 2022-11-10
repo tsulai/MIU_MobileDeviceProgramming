@@ -1,176 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:paddingTop="0dp"
-    android:paddingBottom="30dp"
-    tools:ignore="UselessParent"
-    tools:context=".ui.ShoppingCategoryActivity">
+    tools:context=".ShoppingCategory">
 
     <TextView
-        android:id="@+id/welcome_message"
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="welcome"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+        android:text="Welcome "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Shop By Categories"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
 
-    <LinearLayout
-        android:layout_marginTop="@dimen/horizontal_20"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/btnElectronics"
+        android:layout_width="164dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/electronics"
+        android:onClick="btnClick"/>
+
+    <TextView
+        android:id="@+id/tvElectronics"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="@dimen/horizontal_margin_8"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:clickable="true"
-                    android:onClick="onElectronicsClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:focusable="true"
-                    tools:ignore="UsingOnClickInXml">
-                    <ImageView
-                        android:contentDescription="@string/electronics"
-                        android:scaleType="fitCenter"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@drawable/electronics"/>
-                    <TextView
-                        android:layout_marginTop="8dp"
-                        android:textAlignment="center"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/electronics"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/horizontal_margin_8"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:onClick="onClothesClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    tools:ignore="UsingOnClickInXml">
-                    <ImageView
-                        android:contentDescription="@string/clothes"
-                        android:scaleType="fitCenter"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@drawable/clothing"/>
-                    <TextView
-                        android:layout_marginTop="8dp"
-                        android:textAlignment="center"
-                        android:layout_marginBottom="8dp"
-                        android:text="Clothing"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="@dimen/horizontal_20"
-            android:orientation="horizontal"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="@dimen/horizontal_margin_8"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:onClick="onBeautyClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    tools:ignore="UsingOnClickInXml">
-                    <ImageView
-                        android:contentDescription="@string/beauty"
-                        android:scaleType="fitCenter"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@drawable/beauty"/>
-                    <TextView
-                        android:layout_marginTop="8dp"
-                        android:textAlignment="center"
-                        android:text="@string/beauty"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_marginBottom="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/horizontal_margin_8"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:onClick="onFoodClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    tools:ignore="UsingOnClickInXml">
-                    <ImageView
-                        android:contentDescription="@string/clothes"
-                        android:scaleType="fitCenter"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@drawable/food"/>
-                    <TextView
-                        android:layout_marginTop="8dp"
-                        android:textAlignment="center"
-                        android:text="@string/food"
-                        android:layout_marginBottom="8dp"
-                        android:layout_width="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
+        android:text="Electronics"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnElectronics"
+        app:layout_constraintVertical_bias="0.058" />
 
+    <TextView
+        android:id="@+id/tvClothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clothing"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.799"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnElectronics"
+        app:layout_constraintVertical_bias="0.056" />
 
+    <ImageButton
+        android:id="@+id/btnClothing"
+        android:layout_width="159dp"
+        android:layout_height="143dp"
+        android:background="@drawable/clothing"
+        android:onClick="btnClick"
+        app:layout_constraintBottom_toTopOf="@+id/tvClothing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/btnElectronics"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/btnBeauty"
+        android:layout_width="163dp"
+        android:layout_height="159dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvElectronics"
+        app:layout_constraintVertical_bias="0.209"        
+        android:background="@drawable/beauty"
+        android:onClick="btnClick"/>
+
+    <TextView
+        android:id="@+id/tvBeauty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beauty"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBeauty"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <ImageButton
+        android:id="@+id/btnFood"
+        android:layout_width="161dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClothing"
+        app:layout_constraintVertical_bias="0.209"
+        android:background="@drawable/food"
+        android:onClick="btnClick"/>
+
+    <TextView
+        android:id="@+id/tvFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFood"
+        app:layout_constraintVertical_bias="0.352" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
