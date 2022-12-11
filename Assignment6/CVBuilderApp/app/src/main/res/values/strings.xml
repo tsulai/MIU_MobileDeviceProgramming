@@ -20,8 +20,20 @@
         <item>Work Experience</item>
     </array>
     <array name="homeDesc">
-        <item>&lt;strong&gt;Completed&lt;/strong&gt; on-campus studies and currently taking distance education courses to complete a Master\'s Degree in Computer Science (Available for full-time, W-2 employment).</item>
-        <item>&lt;b&gt;Languages:&lt;/b&gt;  JavaScript, Java, VB.NET &lt;br /&gt; &lt;b&gt;Web:&lt;/b&gt;  HTML, CSS, jQuery, Bootstrap, Express.js, React, Redux&lt;br /&gt; &lt;b&gt;Web Services:&lt;/b&gt;  REST, AWS &lt;br /&gt; &lt;b&gt;Web and Application Servers:&lt;/b&gt;  IIS &lt;br /&gt; &lt;b&gt;Frameworks:&lt;/b&gt;  ASP.NET, Spring Boot, Hibernate &lt;br /&gt; &lt;b&gt;Databases:&lt;/b&gt;  MS SQL, MySQL &lt;br /&gt; &lt;b&gt;Design Patterns:&lt;/b&gt;  Singleton &lt;br /&gt;&lt;b&gt;SDLC:&lt;/b&gt;  Waterfall, Agile/ Scrum &lt;br /&gt; &lt;b&gt;Tools:&lt;/b&gt;  Git, VS Code, Visual Studio 2019, StarUML, Postman, Docker, Google Analytics, Adobe Photoshop, SortSite (Web Interface Standard Checker), Sublime Text, Visual Source Safe &lt;br /&gt; &lt;b&gt;Platforms:&lt;/b&gt;  Windows</item>
+        <item>&lt;strong&gt;Completed&lt;/strong&gt; on-campus studies and currently taking distance
+            education courses to complete a Master\'s Degree in Computer Science (Available for
+            full-time, W-2 employment).
+        </item>
+        <item>&lt;b&gt;Languages:&lt;/b&gt; JavaScript, Java, VB.NET &lt;br /&gt; &lt;b&gt;Web:&lt;/b&gt;
+            HTML, CSS, jQuery, Bootstrap, Express.js, React, Redux&lt;br /&gt; &lt;b&gt;Web
+            Services:&lt;/b&gt; REST, AWS &lt;br /&gt; &lt;b&gt;Web and Application Servers:&lt;/b&gt;
+            IIS &lt;br /&gt; &lt;b&gt;Frameworks:&lt;/b&gt; ASP.NET, Spring Boot, Hibernate &lt;br /&gt;
+            &lt;b&gt;Databases:&lt;/b&gt; MS SQL, MySQL &lt;br /&gt; &lt;b&gt;Design Patterns:&lt;/b&gt;
+            Singleton &lt;br /&gt;&lt;b&gt;SDLC:&lt;/b&gt; Waterfall, Agile/ Scrum &lt;br /&gt; &lt;b&gt;Tools:&lt;/b&gt;
+            Git, VS Code, Visual Studio 2019, StarUML, Postman, Docker, Google Analytics, Adobe
+            Photoshop, SortSite (Web Interface Standard Checker), Sublime Text, Visual Source Safe
+            &lt;br /&gt; &lt;b&gt;Platforms:&lt;/b&gt; Windows
+        </item>
     </array>
     <!-- About -->
     <string name="abtTitle">About Me</string>

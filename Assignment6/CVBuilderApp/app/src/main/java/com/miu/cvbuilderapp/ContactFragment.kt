@@ -57,6 +57,11 @@ class ContactFragment : Fragment() {
         binding.resume.tv1.text = resources.getString(R.string.ctResume)
         binding.resume.tv2.text = resources.getString(R.string.ctResumeLabel)
 
+        binding.resume.tv2.setOnClickListener{
+            val uri = Uri.parse("https://1drv.ms/b/s!AsIJBY2JHCGd7fVWH23drsGmxm8dlg?e=ZG9KF6");
+            val it = Intent(Intent.ACTION_VIEW,uri);
+            startActivity(it)
+        }
         return view
     }
 }
